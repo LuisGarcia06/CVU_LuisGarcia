@@ -11,11 +11,37 @@
       padding: 0;
       background: #f0f2f5;
       color: #333;
+      scroll-behavior: smooth;
+    }
+
+    /* 🔹 Barra de navegación */
+    nav {
+      background: #1e3a8a;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #fbbf24;
     }
 
     .container {
       max-width: 1000px;
-      margin: 2rem auto;
+      margin: 6rem auto 2rem auto; /* espacio por el menú */
       padding: 1rem;
       display: grid;
       grid-template-columns: 1fr 2fr;
@@ -95,6 +121,15 @@
 </head>
 <body>
 
+  <!-- 🔹 Menú de navegación -->
+  <nav>
+    <a href="#acerca">Acerca de mí</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#tecnicas">Técnicas</a>
+    <a href="#educacion">Educación</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
   <div class="container">
     <!-- Columna izquierda -->
     <div class="card profile">
@@ -102,7 +137,7 @@
       <h1>Luis Bernardo García Caamal</h1>
       <p>Estudiante en Ingeniería en Sistemas Computacionales</p>
 
-      <h2>Contacto</h2>
+      <h2 id="contacto">Contacto</h2>
       <div class="contacto">
         <p>📞 984-876-6318</p>
         <p>📧 garciacamalluisbernardo@gmail.com</p>
@@ -112,10 +147,10 @@
 
     <!-- Columna derecha -->
     <div class="card">
-      <h2>Acerca de mí</h2>
+      <h2 id="acerca">Acerca de mí</h2>
       <p>Estudiante de ingeniería de sistemas con interés en bases de datos. Me destaco en responsabilidad, capacidad de aprendizaje y trabajo en equipo. Busco una primera oportunidad para aplicar mis conocimientos en bases de datos.</p>
 
-      <h2>Habilidades</h2>
+      <h2 id="habilidades">Habilidades</h2>
       <ul>
         <li>Comunicación asertiva</li>
         <li>Gestión de activos</li>
@@ -123,14 +158,14 @@
         <li>Trabajo en equipo</li>
       </ul>
 
-      <h2>Habilidades Técnicas</h2>
+      <h2 id="tecnicas">Habilidades Técnicas</h2>
       <ul>
         <li>Manejo de Office (Word, Excel, PowerPoint)</li>
         <li>Lenguaje ensamblador (Automatización de una pluma)</li>
         <li>Diseño de circuitos con PIC</li>
       </ul>
 
-      <h2>Educación</h2>
+      <h2 id="educacion">Educación</h2>
       <p><strong>Instituto Tecnológico Superior F.C.P.</strong> - Ing. en Sistemas Computacionales (2022 - Actualidad)</p>
       <p><strong>TSMEC</strong> - Preparatoria (2019 - 2022)</p>
     </div>
